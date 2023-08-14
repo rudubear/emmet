@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --headerHeight: 3rem;
+            --footerHeight: 2rem;
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: brown;
+            color: bisque;
+        }
+
+        header{
+            height: var(--headerHeight);
+        }
+
+        footer {
+            height: var(--footerHeight);
+        }
+
+
+        .main {
+            background-color: darkblue;
+            color: lightblue;
+            height: calc(100vh - (var(--headerHeight) + var(--footerHeight)));
+        }
+    </style>
+</head>
+<body>
+    <header>this is my header</header>
+    <div class="main">this is my body</div>
+    <footer>this is my footer</footer>
+</body>
+</html>
